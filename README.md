@@ -7,3 +7,5 @@
 The code repository where I learn programming (again). Decided to open-source it to provide reference for strangers as well as myself.
 
 Feel free to open an issue if you see a [bug](https://github.com/HackerDaGreat57/learn/issues) which **isn't** intentional.
+
+###### Everything is public domain :)
