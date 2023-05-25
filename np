@@ -1,7 +1,22 @@
-#np: New Project creation script
+# np: New Project creation script
 
 read -p "Chapter number: " chn
 read -p "Exercise number: " exn
 
 mkdir -p ch$chn/e$exn/src
 cp template.cpp ch$chn/e$exn/src/main.cpp
+cp makefile.linux ch$chn/e$exn/makefile.linux
+cp build.linux.arm64 ch$chn/e$exn/build.linux.arm64
+cp build.linux.x86_64 ch$chn/e$exn/build.linux.x86_64
+
+cd ch$chn/e$exn # Time to get our hands dirty
+
+# F&R stuff so it makes more sense
+sed -i "s/chN/ch$chn/g" makefile.linux
+sed -i "s/eN/e$exn/g" makefile.linux
+sed -i "s/chN/ch$chn/g" build.linux.arm64
+sed -i "s/eN/e$exn/g" build.linux.arm64
+sed -i "s/chN/ch$chn/g" build.linux.x86_64
+sed -i "s/eN/e$exn/g" build.linux.x86_64
+
+# Now the hard part :/
