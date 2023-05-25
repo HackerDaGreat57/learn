@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "Linux ARM64",
+            "includePath": [
+                "${workspaceFolder}/**",
+            ],
+            "defines": [],
+            "compilerPath": "/usr/local/bin/aarch64-unknown-linux-gnu-gcc",
+            "cStandard": "c89",
+            "cppStandard": "gnu++23",
+            "intelliSenseMode": "linux-gcc-arm64",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "compilerArgs": [
+                "-Wall",
+                "-Wextra",
+                "-pedantic",
+                "-fpermissive",
+                "-pg",
+                "-g3",
+                "-Os",
+                "-flto",
+                "-save-temps",
+                "-std=gnu++23",
+                "-fdiagnostics-color=always"
+            ]
+        }
+    ],
+    "version": 4
+}
