@@ -1,5 +1,7 @@
+#np: New Project creation script
+
 read -p "Chapter number: " chn
 read -p "Exercise number: " exn
 
 mkdir -p ch$chn/e$exn/src
-echo "" ch$chn/e$exn/src/main.cpp
+cp template.cpp ch$chn/e$exn/src/main.cpp

@@ -1,4 +1,4 @@
-//template.cpp: this file is used to calibrate the flibbertigibbet
+//main.cpp: this file is used to calibrate the flibbertigibbet
 
 //Includes
 #include <iostream> //Console streams (essential)
