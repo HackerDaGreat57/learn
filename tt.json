@@ -1,0 +1,17 @@
+    {
+      "type": "cppbuild",
+      "label": "build_chN_eN",
+      "command": "./${workspaceFolder}/chN/eN/build.linux.arm64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/chN/eN"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds chN_eN for Linux arm64."
+    }
