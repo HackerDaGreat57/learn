@@ -2,7 +2,6 @@
 
 //Includes
 #include <iostream> //Console streams (essential)
-#include <cmath> //Mathematical functions
 
 int main(int argc, char *argv[]) {
   long double weight;
