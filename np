@@ -49,7 +49,7 @@ rm cnf_tmp.json
 
 cd $RDIR # Almost done.
 
-printf \n >> .gitignore
+echo >> .gitignore # Append newline to .gitignore
 echo ch$CHN/e$EXN/bin/* >> .gitignore # Add build residues
 echo ch$CHN/e$EXN/obj/* >> .gitignore # to the .gitignore
 
