@@ -1,0 +1,7 @@
+# Build script for ch2_e5 on Linux (arm64)
+export RBDIR=$(pwd) # RBDIR = Root Build DIRectory
+
+cd $RBDIR # Now we'll build ch2_e5
+make -f makefile.linux arm64_conv # Go!
+
+printf "\n\nDone.\n" # Done.

@@ -260,6 +260,58 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "name": "ch2_e5_arm64",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build_ch2_e5_arm64",
+      "program": "${workspaceFolder}/ch2/e5/bin/arm64/ch2_e5",
+      "args": [
+      ],
+      "stopAte5try": false,
+      "cwd": "${workspaceFolder}/ch2/e5/bin/arm64",
+      "e5vironme5t": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "e5able pretty-printing for gdb",
+          "text": "-e5able-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "ch2_e5_x86_64",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build_ch2_e5_x86_64",
+      "program": "${workspaceFolder}/ch2/e5/bin/x86_64/ch2_e5",
+      "args": [
+      ],
+      "stopAte5try": false,
+      "cwd": "${workspaceFolder}/ch2/e5/bin/x86_64",
+      "e5vironme5t": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "e5able pretty-printing for gdb",
+          "text": "-e5able-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }
