@@ -34,6 +34,74 @@
         "isDefault": true
       },
       "detail": "Builds ch1_e1 for Linux x86_64."
+    },
+    {
+      "type": "cppbuild",
+      "label": "build_ch2_e1_arm64",
+      "command": "./build.linux.arm64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/ch2/e1"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds ch2_e1 for Linux arm64."
+    },
+    {
+      "type": "cppbuild",
+      "label": "build_ch2_e1_x86_64",
+      "command": "./build.linux.x86_64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/ch2/e1"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds ch2_e1 for Linux x86_64."
+    },
+    {
+      "type": "cppbuild",
+      "label": "build_ch2_e2_arm64",
+      "command": "./build.linux.arm64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/ch2/e2"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds ch2_e2 for Linux arm64."
+    },
+    {
+      "type": "cppbuild",
+      "label": "build_ch2_e2_x86_64",
+      "command": "./build.linux.x86_64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/ch2/e2"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds ch2_e2 for Linux x86_64."
     }
   ]
 }
