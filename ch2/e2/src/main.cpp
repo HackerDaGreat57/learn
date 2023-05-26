@@ -1,10 +1,16 @@
-//main.cpp: this file is used to calibrate the flibbertigibbet
+//main.cpp: calculate the area of a circle
 
 //Includes
 #include <iostream> //Console streams (essential)
+#include <cmath> //For Pi
 
 int main(int argc, char *argv[]) {
-  //figure out how to hack into the fbi's nude collection here
+  long double radius;
+  std::cout << "Please enter the radius of your circle: ";
+  std::cin >> radius;
+
+  long double area = M_PI * radius * radius;
+  std::cout << "The area of your circle is " << area << std::endl;
 
   return 0;
 }

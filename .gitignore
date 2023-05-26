@@ -1,5 +1,8 @@
 ch1/e1/bin/*
-ch1/e1/obj/ch2/e1/bin/*
+ch1/e1/obj/*
+ch2/e1/bin/*
 ch2/e1/obj/*
 ch2/e2/bin/*
 ch2/e2/obj/*
+ch2/e3/bin/*
+ch2/e3/obj/*

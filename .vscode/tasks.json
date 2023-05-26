@@ -102,6 +102,40 @@
         "isDefault": true
       },
       "detail": "Builds ch2_e2 for Linux x86_64."
+    },
+    {
+      "type": "cppbuild",
+      "label": "build_ch2_e3_arm64",
+      "command": "./build.linux.arm64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/ch2/e3"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds ch2_e3 for Linux arm64."
+    },
+    {
+      "type": "cppbuild",
+      "label": "build_ch2_e3_x86_64",
+      "command": "./build.linux.x86_64",
+      "args": [],
+      "options": {
+        "cwd": "${workspaceFolder}/ch2/e3"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Builds ch2_e3 for Linux x86_64."
     }
   ]
 }
