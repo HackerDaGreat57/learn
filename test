@@ -1,9 +1,0 @@
-export RDIR=$(pwd) # Root DIRectory
-
-cd .vscode
-export NL=$(wc -l < tasks2.json)
-export NLR=$(($NL-2)) # This is not as funky as it looks, it's just subtracting 2 from $NL
-sed -i "$NLR s/$/,/" tasks2.json
-
-
-cd $RDIR

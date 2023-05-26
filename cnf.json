@@ -1,23 +1,20 @@
-{
-  "version": "0.2.0",
-  "configurations": [
     {
-      "name": "ch1_e1_arm64",
+      "name": "chN_eN_arm64",
       "type": "cppdbg",
       "request": "launch",
-      "preLaunchTask": "build_ch1_e1_arm64",
-      "program": "${workspaceFolder}/ch1/e1/bin/arm64/ch1_e1",
+      "preLaunchTask": "build_chN_eN_arm64",
+      "program": "${workspaceFolder}/chN/eN/bin/arm64/chN_eN",
       "args": [
       ],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}/ch1/e1/bin/arm64",
-      "environment": [],
+      "stopAteNtry": false,
+      "cwd": "${workspaceFolder}/chN/eN/bin/arm64",
+      "eNvironmeNt": [],
       "externalConsole": false,
       "MIMode": "gdb",
       "setupCommands": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
+          "description": "eNable pretty-printing for gdb",
+          "text": "-eNable-pretty-printing",
           "ignoreFailures": true
         },
         {
@@ -28,22 +25,22 @@
       ]
     },
     {
-      "name": "ch1_e1_x86_64",
+      "name": "chN_eN_x86_64",
       "type": "cppdbg",
       "request": "launch",
-      "preLaunchTask": "build_ch1_e1_x86_64",
-      "program": "${workspaceFolder}/ch1/e1/bin/x86_64/ch1_e1",
+      "preLaunchTask": "build_chN_eN_x86_64",
+      "program": "${workspaceFolder}/chN/eN/bin/x86_64/chN_eN",
       "args": [
       ],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}/ch1/e1/bin/x86_64",
-      "environment": [],
+      "stopAteNtry": false,
+      "cwd": "${workspaceFolder}/chN/eN/bin/x86_64",
+      "eNvironmeNt": [],
       "externalConsole": false,
       "MIMode": "gdb",
       "setupCommands": [
         {
-          "description": "Enable pretty-printing for gdb",
-          "text": "-enable-pretty-printing",
+          "description": "eNable pretty-printing for gdb",
+          "text": "-eNable-pretty-printing",
           "ignoreFailures": true
         },
         {
@@ -53,5 +50,3 @@
         }
       ]
     }
-  ]
-}

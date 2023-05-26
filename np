@@ -1,22 +1,55 @@
 # np: New Project creation script
 
-read -p "Chapter number: " chn
-read -p "Exercise number: " exn
+read -p "Chapter number: " CHN
+read -p "Exercise number: " EXN
 
-mkdir -p ch$chn/e$exn/src
-cp template.cpp ch$chn/e$exn/src/main.cpp
-cp makefile.linux ch$chn/e$exn/makefile.linux
-cp build.linux.arm64 ch$chn/e$exn/build.linux.arm64
-cp build.linux.x86_64 ch$chn/e$exn/build.linux.x86_64
+export RDIR=$(pwd) # Root DIRectory
 
-cd ch$chn/e$exn # Time to get our hands dirty
+mkdir -p ch$CHN/e$EXN/src
+cp template.cpp ch$CHN/e$EXN/src/main.cpp
+cp makefile.linux ch$CHN/e$EXN/makefile.linux
+cp build.linux.arm64 ch$CHN/e$EXN/build.linux.arm64
+cp build.linux.x86_64 ch$CHN/e$EXN/build.linux.x86_64
+
+cd ch$CHN/e$EXN # Time to get our hands dirty
 
 # F&R stuff so it makes more sense
-sed -i "s/chN/ch$chn/g" makefile.linux
-sed -i "s/eN/e$exn/g" makefile.linux
-sed -i "s/chN/ch$chn/g" build.linux.arm64
-sed -i "s/eN/e$exn/g" build.linux.arm64
-sed -i "s/chN/ch$chn/g" build.linux.x86_64
-sed -i "s/eN/e$exn/g" build.linux.x86_64
+sed -i "s/chN/ch$CHN/g" makefile.linux
+sed -i "s/eN/e$EXN/g" makefile.linux
+sed -i "s/chN/ch$CHN/g" build.linux.arm64
+sed -i "s/eN/e$EXN/g" build.linux.arm64
+sed -i "s/chN/ch$CHN/g" build.linux.x86_64
+sed -i "s/eN/e$EXN/g" build.linux.x86_64
 
 # Now the hard part :/
+cd $RDIR
+
+cp tt.json tt_tmp.json
+sed -i "s/chN/ch$CHN/g" tt_tmp.json
+sed -i "s/eN/e$EXN/g" tt_tmp.json
+mv tt_tmp.json .vscode/tt_tmp.json
+
+cp cnf.json cnf_tmp.json
+sed -i "s/chN/ch$CHN/g" cnf_tmp.json
+sed -i "s/eN/e$EXN/g" cnf_tmp.json
+mv cnf_tmp.json .vscode/cnf_tmp.json
+
+cd .vscode
+export NL=$(wc -l < tasks.json)
+export NLR=$(($NL-1)) # This is not as funky as it looks, it's just subtracting 1 from $NL
+sed -i "$NLR s/$/,/" tasks.json
+sed -i "$NLR rtt_tmp.json" tasks.json
+rm tt_tmp.json
+
+export LNL=$(wc -l < launch.json)
+export LNLR=$(($LNL-1)) # Same funky code from line 39
+sed -i "$LNLR s/$/,/" launch.json
+sed -i "$LNLR rcnf_tmp.json" launch.json
+rm cnf_tmp.json
+
+cd $RDIR # Almost done.
+
+echo ch$CHN/e$EXN/bin/* >> .gitignore # Add build residues
+echo ch$CHN/e$EXN/obj/* >> .gitignore # to the .gitignore
+
+# Done!

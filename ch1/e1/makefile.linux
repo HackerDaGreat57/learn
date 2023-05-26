@@ -1,4 +1,4 @@
-# chN_eN Makefile for Linux (x86_64, arm64)
+# ch1_e1 Makefile for Linux (x86_64, arm64)
 # Please run build.linux.{arch} instead of using this Makefile directly.
 
 CPP = aarch64-unknown-linux-gnu-g++ -D__DEBUG__
@@ -11,11 +11,11 @@ CONV_INCS =
 RM = rm -rfv
 
 X86_64 = -march=x86-64
-X86_64_BIN = bin/x86_64/chN_eN
+X86_64_BIN = bin/x86_64/ch1_e1
 X86_64_OBJ = obj/x86_64/main.o
 
 ARM64 = -march=armv8-a
-ARM64_BIN = bin/arm64/chN_eN
+ARM64_BIN = bin/arm64/ch1_e1
 ARM64_OBJ = obj/arm64/main.o
 
 #.PHONY: all all-before all-after clean clean-custom x86_64 arm64
