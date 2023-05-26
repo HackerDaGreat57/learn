@@ -1,4 +1,4 @@
-//main.cpp: calculate my BMI from
+//main.cpp: calculate my BMI
 
 //Includes
 #include <iostream> //Console streams (essential)
