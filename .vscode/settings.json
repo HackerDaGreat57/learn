@@ -73,7 +73,9 @@
     "typeinfo": "cpp",
     "valarray": "cpp",
     "variant": "cpp",
-    "charconv": "cpp"
+    "charconv": "cpp",
+    "format": "cpp",
+    "span": "cpp"
   },
   "docify.commentService.docstringFormat": "Doxygen",
   "docify.commentService.sidePanelReviewMode": true
