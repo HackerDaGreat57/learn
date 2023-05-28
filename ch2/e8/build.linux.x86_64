@@ -1,0 +1,7 @@
+# Build script for ch2_e8 on Linux (x86_64)
+export RBDIR=$(pwd) # RBDIR = Root Build DIRectory
+
+cd $RBDIR # Now we'll build ch2_e8
+make -f makefile.linux x86_64_conv # Go!
+
+printf "\n\nDone.\n" # Done.

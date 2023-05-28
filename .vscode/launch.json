@@ -416,6 +416,58 @@
           "ignoreFailures": true
         }
       ]
+    },
+    {
+      "name": "ch2_e8_arm64",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build_ch2_e8_arm64",
+      "program": "${workspaceFolder}/ch2/e8/bin/arm64/ch2_e8",
+      "args": [
+      ],
+      "stopAte8try": false,
+      "cwd": "${workspaceFolder}/ch2/e8/bin/arm64",
+      "e8vironme8t": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "e8able pretty-printing for gdb",
+          "text": "-e8able-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
+    },
+    {
+      "name": "ch2_e8_x86_64",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build_ch2_e8_x86_64",
+      "program": "${workspaceFolder}/ch2/e8/bin/x86_64/ch2_e8",
+      "args": [
+      ],
+      "stopAte8try": false,
+      "cwd": "${workspaceFolder}/ch2/e8/bin/x86_64",
+      "e8vironme8t": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "e8able pretty-printing for gdb",
+          "text": "-e8able-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ]
     }
   ]
 }
