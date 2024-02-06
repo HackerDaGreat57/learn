@@ -6,6 +6,6 @@
 
 The repository where I learn programming (again). Decided to open-source it to provide reference for strangers as well as myself.
 
-As of this commit I'm studying RP2040 assembly language.
+As of this commit I'm studying [RP2040 assembly](https://github.com/HackerDaGreat57/learn/tree/rp2040-asm) language.
 
 ###### Everything is public domain :)
