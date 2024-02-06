@@ -1,0 +1,5 @@
+# Example: pp0u 0 921200
+#   /dev/ttyACM0^ ^921600 baud
+
+sudo chmod 666 /dev/ttyACM${1}
+sudo cu -l /dev/ttyACM${1} -s $2

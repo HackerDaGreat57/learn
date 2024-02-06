@@ -1,0 +1,5 @@
+# Example: pp0s 0 921200
+#   /dev/ttyUSB0^ ^921600 baud
+
+sudo chmod 666 /dev/ttyUSB${1}
+sudo cu -l /dev/ttyUSB${1} -s $2
