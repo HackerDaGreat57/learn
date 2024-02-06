@@ -10,7 +10,7 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 _deps
-src/pico-sdk/*
+src/*/pico-sdk/*
 
 # Build artifacts
 ELF2UF2Build-*
