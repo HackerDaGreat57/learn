@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Reset",
+      "type": "shell",
+      "command": "sudo",
+      "args": [
+        "openocd",
+        "-f", "interface/raspberrypi-swd.cfg",
+        "-f", "target/rp2040.cfg",
+        "-c", "adapter speed 5000",
+        "-c", "reset exit"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Upload",
+      "type": "shell",
+      "command": "sudo",
+      "args": [
+        "openocd",
+        "-f", "interface/raspberrypi-swd.cfg",
+        "-f", "target/rp2040.cfg",
+        "-c", "adapter speed 5000",
+        "-c", "program ${workspaceFolder}/src/${fileDirnameBasename}/${fileDirnameBasename}.elf verify reset exit"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

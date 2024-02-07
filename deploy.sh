@@ -4,7 +4,7 @@
 
 mount_location=/mnt/pico # where the flash partition shall be mounted
                          # (no trailing slash, please)
-binary=${1}.uf2 # the UF2 binary to send to the Pico
+binary=${PWD##*/}.uf2 # the UF2 binary to send to the Pico
 
 before=$(lsblk -o NAME) # get existing devices
 read -n 1 -s -r -p "Plug the Pico in BOOTSEL mode. Press Enter when finished."
