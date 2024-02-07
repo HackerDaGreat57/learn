@@ -12,7 +12,6 @@
 
 main:
   bl stdio_init_all @ Initialize UART/USB
-
   ldr r0, =init_screen
   bl printf @ Basically reset the terminal (clear screen, move cursor to (0,0))
 
