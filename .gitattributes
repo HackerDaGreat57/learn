@@ -1,0 +1,2 @@
+*.S linguist-language=Assembly
+*.sh linguist-language=Shell
