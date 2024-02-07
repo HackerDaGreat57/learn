@@ -11,8 +11,8 @@
 .global main @ Provide program starting address to linker
 
 main:
-  mov r7, #0 @ Initialize counter to 0
   bl stdio_init_all @ Initialize UART/USB
+  mov r7, #0 @ Initialize counter to 0
 loop:
   ldr r0, =s_helloworld @ Load address of string
   add r7, #1 @ Increment counter
