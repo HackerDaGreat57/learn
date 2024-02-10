@@ -12,7 +12,7 @@
 
 main:
   bl stdio_init_all @ Initialize UART/USB
-  ldr r0, =init_screen
+  ldr r0, =__init_screen
   bl printf @ Basically reset the terminal (clear screen, move cursor to (0,0))
 
   mov r7, #255 @ Initialize number to (2^8)-1 (8 bits in immediate value for MOV instruction)
@@ -32,12 +32,12 @@ main:
   ldr r0, =print_bin @ Getting ready to print binary format
   mov r1, r7 @ Move the number to the second parameter
   bl printf @ Print decimal format
-done:
-  b done @ loop indefinitely when done
+__done:
+  b __done @ loop indefinitely when done
 
 .data
 .align 4 @ Necessary alignment
-init_screen: .asciz "\033[2J\033[H" @ Clear screen, move cursor to (0,0)
+__init_screen: .asciz "\033[2J\033[H" @ Clear screen, move cursor to (0,0)
 print_dec: .asciz "Dec: %d\n"
 print_hex: .asciz "Hex: %#x\n"
 print_bin: .asciz "Bin: %#b\n" @ `%#b` seems to be specific to the Pico SDK implementation.

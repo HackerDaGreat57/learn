@@ -9,8 +9,8 @@
 
 .thumb_func @ Necessary because SDK uses BLX
 .global main @ Provide program starting address to linker
-
-main:n
+@very gay
+main:
   BL stdio_init_all @ Initialize UART/USB
   ldr r0, =_init_screen
   bl printf @ Basically reset the terminal (clear screen, move cursor to (0,0))
